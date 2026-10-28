@@ -2,6 +2,8 @@
 
 A small, zero-dependency cowsay, in TypeScript, with ESM and CJS builds.
 
+![cowsay-ts demo](docs/demo.gif)
+
 ```bash
 npm install cowsay-ts
 ```
