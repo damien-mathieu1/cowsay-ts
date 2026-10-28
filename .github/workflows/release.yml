@@ -13,6 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
+          ref: main
           fetch-depth: 0
 
       - uses: pnpm/action-setup@v4
@@ -55,6 +56,7 @@ jobs:
           git add package.json pnpm-lock.yaml CHANGELOG.md
           git commit -m "chore(release): ${{ steps.version.outputs.tag }}"
           git tag "${{ steps.version.outputs.tag }}"
+          git pull --rebase origin main
           git push origin main --follow-tags
 
       - name: Create GitHub release
