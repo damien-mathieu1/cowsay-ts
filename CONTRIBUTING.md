@@ -3,12 +3,12 @@
 ```bash
 git clone https://github.com/damien-mathieu1/cowsay-ts
 cd cowsay-ts
-npm install
+pnpm install
 ```
 
-- `npm test` — run the test suite
-- `npm run lint` — lint
-- `npm run build` — build the ESM/CJS/CLI bundles
+- `pnpm test` — run the test suite
+- `pnpm lint` — lint
+- `pnpm build` — build the ESM/CJS/CLI bundles
 
 ## Commits
 

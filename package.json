@@ -30,11 +30,12 @@
     "cli",
     "fun"
   ],
+  "packageManager": "pnpm@11.5.2",
   "scripts": {
     "build": "tsup",
     "test": "node --import tsx --test src/*.test.ts",
     "lint": "eslint .",
-    "prepublishOnly": "npm run build && npm test",
+    "prepublishOnly": "pnpm build && pnpm test",
     "prepare": "husky"
   },
   "devDependencies": {

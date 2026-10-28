@@ -31,7 +31,9 @@ Options:
 cowsay("hi", { animal: "tux", maxWidth: 20 });
 ```
 
-Available animals: `cow` (default), `tux`.
+Available animals: `cow` (default), `tux`, `turtle`, `dragon`, `stegosaurus`,
+`moose`, `elephant`, `fox`, `owl`, `octopus`, `hedgehog`, `bunny`, `dolphin`,
+`sheep`.
 
 ## CLI
 
@@ -44,15 +46,22 @@ npx cowsay-ts -f tux Hello!
 ## Development
 
 ```bash
-npm install
-npm test
-npm run build
+pnpm install
+pnpm test
+pnpm build
 ```
 
 Commits follow [Conventional Commits](https://www.conventionalcommits.org),
 enforced by commitlint on commit. Releases are CalVer (`vYYYY.M.N`), cut by
 hand via the **Release** GitHub Actions workflow, which tags, writes the
 changelog with [git-cliff](https://git-cliff.org), and publishes to npm.
+
+## Attribution
+
+Most animal art is ported from the MIT-licensed
+[cowsay](https://github.com/piuccio/cowsay) npm package by Fabio Crisci and
+contributors, converted from its Perl-template `.cow` format to plain
+strings.
 
 ## License
 
