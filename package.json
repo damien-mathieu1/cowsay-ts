@@ -1,6 +1,6 @@
 {
   "name": "cowsay-ts",
-  "version": "2026.10.1",
+  "version": "2026.10.2",
   "description": "Zero-dependency cowsay, in TypeScript, with ESM and CJS builds",
   "type": "module",
   "main": "./dist/index.cjs",

@@ -1,5 +1,11 @@
 # Changelog
 
+## v2026.10.2 - 2026-10-28
+
+### <!-- 1 -->🐛 Bug Fixes
+
+- Pin release checkout to main tip so a re-run can't push against a stale base
+
 ## v2026.10.1 - 2026-10-28
 
 ### <!-- 0 -->🚀 Features
