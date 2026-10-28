@@ -1,0 +1,50 @@
+{
+  "name": "cowsay-ts",
+  "version": "0.1.0",
+  "description": "Zero-dependency cowsay, in TypeScript, with ESM and CJS builds",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "cowsay-ts": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/damien-mathieu1/cowsay-ts"
+  },
+  "keywords": [
+    "cowsay",
+    "ascii",
+    "cli",
+    "fun"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "node --import tsx --test src/*.test.ts",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run build && npm test",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "eslint": "^10.13.0",
+    "husky": "^9.1.7",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.72.1"
+  }
+}

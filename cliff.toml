@@ -1,0 +1,16 @@
+[git]
+conventional_commits = true
+filter_unconventional = true
+tag_pattern = "v[0-9]*"
+
+[changelog]
+header = "# Changelog\n\n"
+body = """
+## {{ version }} - {{ timestamp | date(format="%Y-%m-%d") }}
+{% for group, commits in commits | group_by(attribute="group") %}
+### {{ group | upper_first }}
+{% for commit in commits %}
+- {{ commit.message | upper_first }}
+{% endfor %}
+{% endfor %}
+"""
